@@ -131,3 +131,126 @@ if (not)
 }*/
 
 
+// Напишите программу, которая выводит случайное трёхзначное число и удаляет вторую цифру этого числа.
+/*int number = new Random().Next(100,1000);
+int result = (number/100)*10 + number % 10;
+Console.WriteLine($"{number} -> {result}");*/
+
+// 1. Напишите программу, которая выводит случайное число из отрезка [10, 99] и показывает наибольшую цифру числа. 
+ 
+ 
+/*int numb = new Random().Next(10, 100); // 34 
+Console.WriteLine($"Выбранное число {numb}"); 
+ 
+if(numb / 10 > numb % 10){ 
+    Console.WriteLine($"максимальное  значение {numb / 10}"); 
+} 
+ Console.WriteLine($"максимальное значение {numb % 10}"); */
+ 
+ 
+ 
+ 
+/* 2. Напишите программу, которая будет принимать на вход два числа и выводить, является ли второе число кратным первому. 
+  Если второе число не кратно числу первому, то программа выводит остаток от деления. 
+ 
+34, 5 -> не кратно, остаток 4 
+16, 4  -> кратно */ 
+ 
+/*int nun_a = int.Parse(Console.ReadLine()!); 
+ 
+int nun_b = int.Parse(Console.ReadLine()!); 
+ 
+int result = nun_a % nun_b; 
+ 
+Console.WriteLine($"результат: {result} = {nun_a} % {nun_b}"); 
+ 
+if(nun_a % nun_b == 0){ 
+    Console.WriteLine("Кратно"); 
+} 
+else{ 
+    Console.WriteLine($"{result}"); 
+} */
+ 
+ 
+ 
+ 
+/* Напишите программу, которая принимает на вход число и проверяет, кратно ли оно одновременно 7 и 23. 
+ 
+14  ->  нет 
+46  ->  нет 
+161 ->  да */ 
+ 
+/*Console.WriteLine("Введите число: "); 
+int nun_C = int.Parse(Console.ReadLine()!); 
+ 
+if(nun_C % 7 == 0 && nun_C % 23 == 0){ 
+    Console.WriteLine($"Результат кратно"); 
+} 
+else{ 
+    Console.WriteLine($"Результат не Кратен!"); 
+} */
+ 
+ 
+ 
+// Напишите программу, которая принимает на вход два числа и проверяет, является ли одно число квадратом другого. 
+ 
+ 
+/*Console.WriteLine("Введите два числа: "); 
+ 
+int number_A = int.Parse(Console.ReadLine()!); 
+int number_B = int.Parse(Console.ReadLine()!); 
+ 
+if(number_A * number_A == number_B || number_B * number_B == number_A){ 
+    Console.WriteLine("Является"); 
+} 
+else{ 
+    Console.WriteLine("НЕ является"); 
+}*/
+
+//ДОМАШНЕЕ ЗАДАНИЕ
+
+// Задача 1: Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа
+
+/*Console.WriteLine("Введите трёхзначное число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+int amount = num.ToString().Length;
+
+if (amount < 3 || amount > 3)
+{
+Console.WriteLine("Вы ввели не трехзначное число! Повторите попытку");
+}
+else{
+     num = num / 10 % 10;
+            Console.WriteLine($"Вторая цифра введённого числа: {num}");
+}*/
+
+
+//Задача 2: Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет. Берем числа до 100000
+
+/*Console.Write("Введи число: ");
+int num1 = Convert.ToInt32(Console.ReadLine());
+string num2 = Convert.ToString(num1);
+if (num2.Length > 2)
+{
+  Console.WriteLine("Третья цифра " + num2[2]);
+}
+else {
+  Console.WriteLine("Третья цифра отсутсвует");
+}*/
+
+//Задача 3: Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным. Обязательна проверка на ввод числа <1 и >7
+
+/*Console.Write("Введи цифру, обозначающую день недели: ");
+int day = Convert.ToInt32(Console.ReadLine());
+
+void CheckingTheDayOfTheWeek (int day) {
+  if (day == 6 || day == 7) {
+  Console.WriteLine("Выходной");
+  }
+  else if (day < 1 || day > 7) {
+    Console.WriteLine("Ошибка");
+  }
+  else Console.WriteLine("Рабочий");
+}
+
+CheckingTheDayOfTheWeek(day);*/
