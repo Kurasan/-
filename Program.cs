@@ -254,3 +254,149 @@ void CheckingTheDayOfTheWeek (int day) {
 }
 
 CheckingTheDayOfTheWeek(day);*/
+
+// Задача № __ 
+// Напишите программу, которая по заданному номеру четверти, показывает  
+// диапазон возможных координат точек в этой четверти (x и y). 
+ 
+/*System.Console.WriteLine("Введите номер четверти: "); 
+int number = Convert.ToInt32(Console.ReadLine()); 
+ 
+if(number == 1) 
+{ 
+    System.Console.WriteLine("x > 0 && y > 0 (Первая четверть)"); 
+} 
+else if(number == 2) 
+{ 
+    System.Console.WriteLine("x < 0 && y >0 (Вторая четверть)"); 
+} 
+else if(number == 3) 
+{ 
+    System.Console.WriteLine("x < 0 && y < 0 (Третья четверть)"); 
+} 
+else if(number == 4) 
+{ 
+    System.Console.WriteLine("x > 0 && y < 0 (Четвертая четверть)"); 
+} 
+else 
+{ 
+    System.Console.WriteLine("Такой четверти не существует! ");
+}*/
+
+//Задача 3. Напишите программу, которая принимает на вход координаты двух точек 
+//и находит расстояние между ними в 2D пространстве.
+
+// ((x1 - x2)^2 + (y1-y2)^2)^(1/2)
+
+/*System.Console.Write("Введите коррдинату x точки А: ");
+int x1 = Convert.ToInt32(Console.ReadLine()); 
+System.Console.Write("Введите коррдинату y точки А: ");
+int y1 = Convert.ToInt32(Console.ReadLine());
+System.Console.Write("Введите коордианту x точки B: ");
+int x2 = Convert.ToInt32(Console.ReadLine()); 
+System.Console.Write("Введите коордианту y точки B: ");
+int y2 = Convert.ToInt32(Console.ReadLine());
+
+double result = Math.Round(Math.Sqrt(Math.Pow((x1 - x2),2) + Math.Pow((y1-y2),2)),4); 
+System.Console.WriteLine($"Расстояние между двумя точками: {result}");*/
+
+
+//Задача 4. Напишите программу, которая принимает на вход число (N) и 
+//выдаёт таблицу квадратов чисел от 1 до N.
+
+/*System.Console.Write("Введите число: ");
+int x = Convert.ToInt32(Console.ReadLine());
+
+// for(int i = 1; i <= x; i++)
+// {
+// System.Console.WriteLine(Math.Pow(i, 2));
+// }
+int count = 1;
+while(count <= x)
+{
+System.Console.Write(Math.Pow(count, 2)+" ");
+count++;
+}*/
+
+//Домашнее задание
+// Задача 19: Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+// 14212 -> нет
+// 23432 -> да
+// 12821 -> да
+
+/*
+Console.Write("Введите число: ");
+string? number = Console.ReadLine();
+
+void CheckingNumber(string number){
+  if (number[0]==number[4] || number[1]==number[3])
+  {
+    Console.WriteLine($"Ваше число: {number} - палиндром.");
+  }
+  else Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
+}
+
+if (number!.Length == 5){
+  CheckingNumber(number);
+}
+else Console.WriteLine($"Введи правильное число");*/
+
+// Задача 21: Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+// A (3,6,8); B (2,1,-7), -> 15.84
+// A (7,-5, 0); B (1,-1,9) -> 11.53
+
+
+/*int x1 = Coordinate("x", "A");
+int y1 = Coordinate("y", "A");
+int z1 = Coordinate("z", "A");
+int x2 = Coordinate("x", "B");
+int y2 = Coordinate("y", "B");
+int z2 = Coordinate("z", "B");
+
+int Coordinate(string coorName, string pointName)
+{
+    Console.Write($"Введите координату {coorName} точки {pointName}: ");
+    return Convert.ToInt16(Console.ReadLine());
+}
+
+double Decision(double x1, double x2, 
+                double y1, double y2, 
+                double z1, double z2){
+  return Math.Sqrt(Math.Pow((x2-x1), 2) + 
+                   Math.Pow((y2-y1), 2) + 
+                   Math.Pow((z2-z1), 2));
+}
+
+double segmentLength =  Math.Round (Decision(x1, x2, y1, y2, z1, z2), 2 );
+
+Console.WriteLine($"Длина отрезка  {segmentLength}");*/
+
+//Задача 23: Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+// 3 -> 1, 8, 27
+// 5 -> 1, 8, 27, 64, 125
+
+/*
+Console.Write("Введите число: ");
+int cube = Convert.ToInt32(Console.ReadLine());
+
+void Cube(int[] cube){
+  int counter = 0;
+  int length = cube.Length;
+  while (counter <  length){
+    cube[counter] = Convert.ToInt32(Math.Pow(counter, 3));
+    counter++;
+  }
+}
+
+void PrintArry(int[] coll){
+  int count = coll.Length;
+  int index = 0;
+  while(index < count){
+    Console.Write(coll[index]+ " ");
+    index++;
+  }
+} 
+
+int[] arry = new int[cube+1];
+Cube(arry);
+PrintArry(arry);*/
