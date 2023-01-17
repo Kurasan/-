@@ -400,3 +400,451 @@ void PrintArry(int[] coll){
 int[] arry = new int[cube+1];
 Cube(arry);
 PrintArry(arry);*/
+
+//Напишите программу, которая принимает на вход число (А) и выдаёт сумму чисел от 1 до А.
+/*Console.Write("Введи число: ");
+int A = int.Parse(Console.ReadLine()!);
+Console.Write($"Сумма чисел от 1 до {A} равна {GetSum(A)}");
+
+//--------------Методы-----------------
+int GetSum (int A){
+    int sum = 0;
+    for(int i = 1; i <= A; i++){
+        sum = sum + i; // sum += i
+    }
+    return sum;
+}*/
+
+/*Console.WriteLine ("Type a number "); 
+int A = int.Parse(Console.ReadLine()!); 
+Console.Write($"Factorial is equal {GetFactorial(A)}"); 
+ 
+int GetFactorial (int A) 
+{ 
+int Factorial = 1; 
+for (int i = 1; i <= A; i++) 
+{ 
+    Factorial = Factorial * i; 
+} 
+return Factorial; 
+}*/ 
+ 
+// Напишите программу, которая принимает на вход число и выдает количество цифр в числе 
+ 
+/*Console.WriteLine ("Type a number "); 
+int number = int.Parse (Console.ReadLine ()!); 
+Console.Write($"The number of digits is {GetQuantity(number)}"); 
+ 
+ 
+int GetQuantity (int A) 
+{ 
+    int Quantity = 0; 
+    if (A == 0) return 1; 
+    while (A > 0) 
+    {Quantity = Quantity + 1; A = A / 10;} 
+    return Quantity; 
+} 
+ 
+Console.WriteLine ("Type a number "); 
+string Number = Console.ReadLine()!; 
+Console.Write($"The number of digits is {GetQuantity2(Number)}"); 
+ 
+int GetQuantity2 (string Number) 
+{ 
+    int Quantity2 = Number.Length; 
+    return Quantity2; 
+}*/ 
+ 
+//Напишите программу, которая выводит массив из восьми элементов, 
+//заполненный нулями и кдиницами в случайном порядке 
+ 
+ 
+/*int[] Array = GetArray(8); 
+Console.Write($"[{String.Join(";", Array)}]"); 
+ 
+int[] GetArray (int size) 
+{ 
+    int[] Array = new int[size]; 
+    for (int i = 0; i < size; i++) 
+    { 
+        Array[i] = new Random().Next(2); 
+    } 
+    return Array; 
+}*/
+//Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9, 9]. 
+//Найдите сумму отрицательных и положительных элементов массива.
+/*int[] array = GetArray(12,-9,9);
+Console.WriteLine($"[{String.Join(",", array)}]");
+
+int positiveSum = 0;
+int negativeSum = 0;
+
+foreach (int el in array)
+{
+    if(el > 0){
+        positiveSum += el;
+    }
+    else{
+        negativeSum += el;
+    }
+}
+
+Console.WriteLine($"Сумма положительных равна {positiveSum}, сумма отрицательных равна {negativeSum}");
+
+// ------Метод------
+int[] GetArray (int size, int minValue, int maxValue){
+    int[] res = new int[size];
+    for(int i = 0; i < size; i++){
+        res[i] = new Random().Next(minValue, maxValue + 1);
+    }
+    return res;
+}*/
+//Напишите программу замены элементов массива:  
+// положительные элементы замените на отрицательные 
+ 
+/*int[] GetArray (int size) 
+{ 
+    int[] Array = new int[size]; 
+    for (int i =0; i < size; i++) 
+    { 
+      Array[i] = new Random().Next(-10, 11);   
+    } 
+    return Array; 
+} 
+/*int[] Array = GetArray(10); 
+Console.WriteLine($"[{String.Join(", ",Array)}]"); 
+for (int i = 0; i < Array.Length; i++) 
+{ 
+    Array[i] = Array[i] * (-1); 
+} 
+Console.WriteLine($"[{String.Join(", ",Array)}]");*/ 
+ 
+//  Задайте массив и напишите программу, 
+// определяет, присутствует ли ли заданное число в массиве 
+/*int[] GetArray (int size) 
+{ 
+    int[] Array = new int[size]; 
+    for (int i =0; i < size; i++) 
+    { 
+      Array[i] = new Random().Next(-10, 11);   
+    } 
+    return Array; 
+} 
+ 
+int[] Array = GetArray(10); 
+int Find = -5; 
+Console.WriteLine($"[{String.Join(", ",Array)}]"); 
+if (FindElement(Array, Find)) 
+{ 
+Console.WriteLine($"Данный элемент найден"); 
+} 
+else 
+{ 
+    Console.WriteLine($"Данный элемент не найден"); 
+} 
+ 
+bool FindElement (int[] Array, int Find) 
+{ 
+foreach (int ArrayEl in Array) 
+{ 
+    if (ArrayEl == Find) 
+    { 
+        return true; 
+    } 
+} 
+return false; 
+}*/
+// Задача 35: Задайте одномерный массив из 123 случайных чисел. 
+// Найдите количество элементов массива, значения которых лежат в отрезке [10,99]. 
+ 
+/*int[] Array = GetArray(123); 
+ 
+int[] GetArray (int size) 
+{ 
+    int[] Array = new int[size]; 
+    for (int i =0; i < size; i++) 
+    { 
+      Array[i] = new Random().Next(0, 1001);   
+    } 
+    return Array; 
+} 
+Console.WriteLine($"[{String.Join(", ",Array)}]"); 
+int count = 0; 
+for (int i = 0; i <= 122; i++) 
+{ 
+if (Array[i] >= 10 && Array[i] < 100) 
+{ 
+    count = count + 1;  
+} 
+} 
+Console.WriteLine($"Количество цифр в данном диапазоне {count}");*/
+
+// Массив из 12 элементов , случайные числа от -9 до 9. НАйти 
+//суммы положительных и отрцательных элементов
+
+/*int[] array = GetArray(12, -9, 9);
+Console.WriteLine($"[{String.Join(",", array)}]");
+
+int positivSum = 0;
+int negativSum = 0;
+
+foreach(int el in array)
+{
+    if(el > 0)
+    { positivSum += el;}
+    else
+    { negativSum += el;}
+}
+
+Console.WriteLine($"Сумма положительных равна {positivSum}, сумма отрицательных равна {negativSum}");
+
+//---------------Methods-------------
+
+int GetArray (int size, int minValue, int maxValue)
+    {int[] res = new int[size];
+    for(int i = 0; i < size; i++)
+    {res[i] = new Random().Next(minValue, maxValue +1);}
+
+    return res;
+}
+
+// //Задача 32: Напишите программу замена элементов массива: 
+// //положительные элементы замените на соответствующие отрицательные, и наоборот.
+
+// //[-4, -8, 8, 2] -> [4, 8, -8, -2]
+
+
+int[] Array = GetArray(6);
+System.Console.WriteLine($"[{String.Join(",", Array)}]");
+int[] Array2 =  Change(Array);
+System.Console.WriteLine($"[{String.Join(",", Array2)}]");
+
+
+//---------------Методы
+
+int[] GetArray(int size)
+{int[] res = new int[size];
+       for(int i = 0; i < size; i++){
+        res[i] = new Random().Next(-10, 10);
+    }
+    return res;
+}
+
+int[] Change(int[] Array)
+{
+    for(int item = 0; item < Array.Length; item++)
+
+{
+    Array[item] = -Array[item];
+}
+return Array;
+}
+
+//Задача 33: Задайте массив. Напишите программу, которая определяет, 
+//присутствует ли заданное число в массиве.
+
+// 4; массив [6, 7, 19, 345, 3] -> нет
+
+// 3; массив [6, 7, 19, 345, 3] -> да
+
+int[] Array = GetArray(5);
+System.Console.WriteLine($"[{String.Join(",", Array)}]");
+System.Console.WriteLine("Введите число:");
+int number = int.Parse(Console.ReadLine()!);
+if(FindNumber(number, Array)) 
+{Console.WriteLine($"Число {number} есть в массиве");}
+else
+{Console.WriteLine($"Число {number} отсутствует в массиве");}
+
+
+//-------------------- Methods-----
+
+
+int[] GetArray(int size)
+{int[] res = new int[size];
+       for(int i = 0; i < size; i++){
+        res[i] = new Random().Next(20);
+    }
+    return res;
+}
+
+bool FindNumber(int number, int[] Array)
+{
+    foreach (int i in Array)
+    {
+        if(i==number)
+        return true;
+            }
+    return false;
+}
+
+// int FindNumber(int number, int[] Array)
+// {
+//     for(int i = 0; i <Array.Length; i++)
+//     {
+//         if(Array[i]==number)
+//         return i;
+//             }
+//     return false;
+// }
+
+//Задача 35: Задайте одномерный массив из 123 случайных чисел. Найдите количество 
+//элементов массива, значения которых лежат в отрезке [10,99].
+
+int[] Array = GetArray(10);
+Array[1] = 11;
+Console.WriteLine($"[{String.Join(",", Array)}]");
+
+Console.WriteLine($"Количество элементов от 10 до 99 в массиве равно {Quantity(Array)}");
+
+//----------------Методы-----
+int[] GetArray(int size)
+{int[] res = new int[size];
+       for(int i = 0; i < size; i++){
+        res[i] = new Random().Next(0, 1001);
+    }
+    return res;
+}
+
+int Quantity(int[] Array)
+{
+    int count = 0;
+    foreach (int el in Array)
+    {
+        if((10 <= el)&&(el  < 100))
+        {count++;}
+    }
+    return count;
+}*/
+//Домашнее задание
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+/*Console.WriteLine($"\nЗадача 25. Возведене числа A в натуральную степень B");
+
+int Exponentiation(int numberA, int numberB){
+  int result = 1;
+  for(int i=1; i <= numberB; i++){
+    result = result * numberA;
+  }
+    // int result = Math.Pow(numberA, numberB);
+    return result;
+}
+
+  Console.Write("Введите число A: ");
+  int numberA = Convert.ToInt32(Console.ReadLine());
+  Console.Write("Введите число B: ");
+  int numberB = Convert.ToInt32(Console.ReadLine());
+
+  int exponentiation = Exponentiation(numberA, numberB);
+  Console.WriteLine("Ответ: " + exponentiation);*/
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+/*Console.WriteLine($"\nЗадача 27. Выдаёт сумму цифр в числе");
+Console.Write("Введите число N: ");
+int numberN = Convert.ToInt32(Console.ReadLine());
+
+  int SumNumber(int numberN){
+    
+    int counter = Convert.ToString(numberN).Length;
+    int advance = 0;
+    int result = 0;
+
+    for (int i = 0; i < counter; i++){
+      advance = numberN - numberN % 10;
+      result = result + (numberN - advance);
+      numberN = numberN / 10;
+    }
+   return result;
+  }
+
+int sumNumber = SumNumber(numberN);
+Console.WriteLine("Сумма цифр в числе: " + sumNumber);*/
+
+// Задача 29: Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+// 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
+// 6, 1, 33 -> [6, 1, 33]
+
+/*Console.WriteLine($"\nЗадача 29. Ряд чисел преобразует в массив");
+Console.Write("Введите ряд чисел, разделенных запятой : ");
+string? seriesOfNumbers = Console.ReadLine();
+
+seriesOfNumbers = seriesOfNumbers + ",";    // дополнительня запятая для обозначения конца строки
+
+// функция удаления пробелов из строки 
+string RemovingSpaces (string series){
+  string seriesNew = "";
+  for (int i = 0; i < series.Length; i++)
+  {
+    if (series[i] != ' ') 
+    {
+      seriesNew += series[i];
+    }
+  }
+  return seriesNew;
+}
+
+//  функция  проверки на правильность ввода 
+void СheckNumber2 (int  series){
+
+      if (series == '0'||series == '1'||series == '2'
+      ||series == '3'||series == '4'||series == '5'||series == '6'
+      ||series == '7'||series == '8'||series == '9'||series == ','
+      ||series == '-')
+      {
+      }
+        else {
+          Console.WriteLine($"Ошибка ввода  символа. Вводи цифры.");
+
+      }
+}
+
+// функция  создания и заполнения массива из строки
+int[] ArrayOfNumbers(string seriesNew){ 
+
+  int[] arrayOfNumbers = new int[1];    // инициализация массива из 1 элемента
+
+  int j =0;
+
+  for (int i = 0; i < seriesNew.Length; i++){
+    string seriesNew1 = "";
+
+    while (seriesNew[i] != ',' && i < seriesNew.Length){
+      seriesNew1 += seriesNew[i];
+      СheckNumber2(seriesNew[i]);
+      i++;
+    }
+    arrayOfNumbers[j] = Convert.ToInt32(seriesNew1);    // заполняет массив значениями из строки
+    if (i < seriesNew.Length-1){
+      arrayOfNumbers = arrayOfNumbers.Concat(new int[] {0}).ToArray();    // добавляет новый нулевой элемент в конец массива
+    }
+    j++;
+  }
+  return arrayOfNumbers;
+}
+
+// функция  вывода массива  
+void PrintArry(int[] coll){
+  int count = coll.Length;
+  int index = 0;
+  Console.Write("[");
+  while(index < count){
+    Console.Write(coll[index]);
+    index++;
+    if (index < count){
+      Console.Write(", ");
+    }
+  }
+  Console.Write("]");
+} 
+
+
+string seriesNew = RemovingSpaces(seriesOfNumbers);
+
+int[] arrayOfNumbers =  ArrayOfNumbers(seriesNew);
+
+PrintArry(arrayOfNumbers);*/
