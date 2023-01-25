@@ -1098,3 +1098,37 @@ Console.WriteLine($"Введено чисел больше 0: {Comparison(massiv
 
 //Задача 43: Написать программу, которая на вход принимает массив из любого количества элементов (не менее 6)в промежутке
 // от 0 до 100, а на выходе выводит этот же массив, но отсортированный по возрастанию(от меньшего числа к большему).
+
+/*int[] arr = new int[6];
+Random r = new Random();
+
+int temp;
+Console.WriteLine(" ");
+for (int i = 0; i < arr.Length; i++)
+{
+  arr[i] = r.Next(6);
+  Console.Write(arr[i] + " ");
+
+}
+
+Console.WriteLine("\n\nСортируем от меньшего к большему\n");
+for (int i = 0; i < arr.Length; i++)
+{
+  for (int j = 0; j < arr.Length; j++)
+  {
+    if (arr[i] < arr[j])
+    {
+      temp = arr[i];
+      arr[i] = arr[j];
+      arr[j] = temp;
+    }
+  }
+
+}
+Console.WriteLine("Отсортированный массив");
+for (int i = 0; i < arr.Length; i++)
+{
+  Console.Write (arr[i] + (" "));
+
+}
+Console.ReadLine();*/
